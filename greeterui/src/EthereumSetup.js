@@ -31,16 +31,14 @@ var hashrate;
 var gasPrice;
 
 /* TASK 4:
- * Get the balance of your default account.
- * You may not need all variables
+ * Get the default (0th) account from your Testrpc
  */
-
-// get Testrpc account 0 address (default account)
 var acct;
-// get balance of account 0 in Ether
-// HINT: use web3.fromWei()
-var balanceBigNum;
-var balanceInWei;
+
+/* TASK 5:
+ * Get the balance of your default account in Ether
+ * HINT: use web3.fromWei()
+ */
 var balance;
 
 //make sure you have a value for each of the following exported variables
