@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {greeterContract, addr, balance, blockNum, hashrate, gasPrice} from './EthereumSetup';
+import {greeterContract, acct, balance, blockNum, hashrate, gasPrice} from './EthereumSetup';
 
 class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
             greeting: "Hello",
-            addr: addr,
+            acct: acct,
             balance: balance,
             blockNum: blockNum,
             hashrate: hashrate,
@@ -31,7 +31,7 @@ class App extends Component {
                     <h2>I am Greeter</h2>
                 </div>
                 <h3>I would like to say: "{this.state.greeting}"</h3>
-                <h3>Your account is: {this.state.addr}</h3>
+                <h3>Your account is: {this.state.acct}</h3>
                 <h3>Your balance is: {this.state.balance} ether</h3>
                 <h3>Latest block number: #{this.state.blockNum}</h3>
                 <h3>Block hashrate: #{this.state.hashrate} hashes per second</h3>

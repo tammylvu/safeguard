@@ -9,37 +9,39 @@ const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 var greeterABI = [{"constant":true,"inputs":[],"name":"greet","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_greeting","type":"string"}],"name":"greeter","outputs":[],"payable":false,"type":"function"}]
 
 // this should be the address of the mined Greeter contract on testrpc after truffle migrate
-var greeterAddress = '0x9b1f7f645351af3631a656421ed2e40f2802e6c0';
+var greeterAddress = '0xREPLACE_ME!';
 
-// creates a greeterContract variable that we can use to call Greeter.sol methods
+// uses web3 api to find a contract with the greeterABI at the greeterAddress on the current network
 const greeterContract = web3.eth.contract(greeterABI).at(greeterAddress);
 
 /* TASK 1:
  * get block number
  */
-var blockNum =
+var blockNum;
 
 /* TASK 2:
  * get hashrate
  */
-var hashrate =
+var hashrate;
 
 /* TASK 3:
  * get gas price
+ * HINT: use BigNumber.toString(10)
  */
-var gasPrice =
+var gasPrice;
 
 /* TASK 4:
  * Get the balance of your default account.
  * You may not need all variables
  */
- 
-// get Testrpc account 0 address (default account)
-var addr =
-// get balance of account 0 in Ether
-// HINT: the web3 getBalance function returns a BigNumber but we want the balance in Ether
-var balanceBigNum =
-var balanceInWei =
-var balance =
 
-export {greeterContract, addr, balance, blockNum, hashrate, gasPrice};
+// get Testrpc account 0 address (default account)
+var acct;
+// get balance of account 0 in Ether
+// HINT: use web3.fromWei()
+var balanceBigNum;
+var balanceInWei;
+var balance;
+
+//make sure you have a value for each of the following exported variables
+export {greeterContract, acct, balance, blockNum, hashrate, gasPrice};
